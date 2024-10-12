@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply font-sans;
+    }
+
+    img {
+        @apply mx-auto;
+    }
+
+    h2 {
+        @apply border-black border-0 border-b-4 border-solid;
+    }
+    h3 {
+        @apply border-black border-b-2 border-solid;
+    }
+
+    h4 {
+        @apply border-black border-b border-solid;
+    }
+            
+    h5 {
+        @apply border-black border-b border-dashed font-bold mt-6 mb-2;
+    }
+
+    mjx-container[jax="SVG"] > svg {
+        display: inline;
+    }
+    
+    summary p {
+        @apply m-0 inline-block;
+    }
+
+    article {
+        @apply max-w-none prose prose-slate;
+    }
+
+    blockquote {
+        @apply border-l-8;
+    }
+    code[class*=language-]::before, code[class*=language-]::after {
+        content: "";
+    }
+
+    img {
+        @apply border-4 rounded p-0 m-4 max-w-[90%] mx-auto;
+    }
+
+}
+
+@layer components {
+    a:not([class]), a:not([class]):visited {
+        @apply underline decoration-purple-500 decoration-2 hover:text-purple-800 hover:decoration-purple-800 active:decoration-4;
+    }
+}
+
+table.no-border tr {
+    @apply border-none;
+}
+
+.prose .fichier {
+    @apply underline decoration-1;
+}
+
+.quote p, .quote ul, .quote ol, .quote li {
+        @apply m-0;
+}
+
+details p {
+    @apply mb-0;
+}
