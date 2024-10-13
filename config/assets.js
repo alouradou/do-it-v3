@@ -1,7 +1,8 @@
-export default async function(eleventyConfig) {
+// const postCSSConfig = require("eleventy-postcss-extension");
 
-  const postCSSConfig = (await import("eleventy-postcss-extension")).default;
-  eleventyConfig.addPlugin(postCSSConfig);
+export default function (eleventyConfig) {
+
+  // eleventyConfig.addPlugin(postCSSConfig);
 
   // garder le node_modules des assets, ignorer les autres
   eleventyConfig.addPassthroughCopy("src/assets/node_modules");

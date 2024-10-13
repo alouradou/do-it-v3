@@ -21,7 +21,7 @@
     h4 {
         @apply border-black border-b border-solid;
     }
-            
+
     h5 {
         @apply border-black border-b border-dashed font-bold mt-6 mb-2;
     }
@@ -29,7 +29,7 @@
     mjx-container[jax="SVG"] > svg {
         display: inline;
     }
-    
+
     summary p {
         @apply m-0 inline-block;
     }
