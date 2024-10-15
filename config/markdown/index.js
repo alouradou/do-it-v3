@@ -1,10 +1,11 @@
+import markdownIt from "markdown-it"
 import markdownItAttrs from "markdown-it-attrs"
+import markdownItMultimdTable from "markdown-it-multimd-table"
 import eleventyMdSyntaxHighlight from "@pborenstein/eleventy-md-syntax-highlight"
 
-export default async function(eleventyConfig) {
+// import shortcodes from "./shortcodes/index.js"
 
-    const markdownIt = (await import("markdown-it")).default;
-    const markdownItMultimdTable = (await import("markdown-it-multimd-table")).default;
+export default async function(eleventyConfig) {
 
     let markdownItLibrary = markdownIt({
         html: true,
@@ -35,6 +36,5 @@ export default async function(eleventyConfig) {
 
     eleventyConfig.setLibrary("md", markdownItLibrary)
 
-    // const shortcodes = (await import('./shortcodes/index.js')).default;
     // shortcodes(eleventyConfig);
 };
