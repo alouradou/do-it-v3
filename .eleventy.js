@@ -7,21 +7,19 @@ import collectionsConfig from "./config/filters.js";
 
 export default function(eleventyConfig) {
 
-  setupMarkdown(eleventyConfig);
-  setupShortcodes(eleventyConfig);
-  assetsConfig(eleventyConfig);
-
-
-  // const embedYouTube = (await import("eleventy-plugin-youtube-embed")).default;
-
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+
   // eleventyConfig.addPlugin(embedYouTube);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
+  setupMarkdown(eleventyConfig);
+  setupShortcodes(eleventyConfig);
+  assetsConfig(eleventyConfig);
+  collectionsConfig(eleventyConfig);
+
   // markdownConfig(eleventyConfig);
   // searchConfig(eleventyConfig);
-  collectionsConfig(eleventyConfig);
 
   eleventyConfig.addFilter('getValueFromPath', function(str, separator, value) {
     return str.split(new RegExp(separator))[value];

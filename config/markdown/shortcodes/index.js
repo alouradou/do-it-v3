@@ -4,6 +4,6 @@ import resume from "./resume.js";
 
 export default function setupShortcodes(eleventyConfig) {
     quotes(eleventyConfig);
-    resume(eleventyConfig);
+    // resume(eleventyConfig);
 }
 
